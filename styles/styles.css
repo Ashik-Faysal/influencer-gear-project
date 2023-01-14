@@ -54,9 +54,24 @@
   font-size: 1.5em;
 }
 .camera {
-  background: url("../images/Circle/ design.svg");
+  background: url(../images/Circle\ design.svg);
   margin-right: 50px;
   background-repeat: no-repeat;
+}
+/*-------------------------
+                      logo-section
+                      ------------------------*/
+hr {
+  margin: 10px 130px;
+  opacity: 0.5;
+}
+.logo-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 80px;
+}
+.logo-section img {
+  padding: 10px;
 }
 /*------------------------------------------------------
                                   Media Quary
@@ -70,7 +85,15 @@
     grid-template-columns: repeat(1, 1fr);
   }
   .journey-influencer {
-  flex-direction: column-reverse;
+    flex-direction: column-reverse;
+  }
+  .logo-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  hr {
+    display: none;
   }
 }
 @media screen and (min-width: 577px) and (max-width: 992px) {
@@ -80,5 +103,10 @@
   .header-manu {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .logo-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
   }
 }
