@@ -7,6 +7,7 @@
 :root {
   --primary-color: #e02c6d;
   --secondary-color: #fff;
+  --primary-font-color:color: #787885;
 }
 .btn-primary {
   background-color: var(--primary-color);
@@ -14,6 +15,10 @@
   color: var(--secondary-color);
   padding: 10px;
   border-radius: 15px;
+}
+p{
+  color: var(--primary-font-color);
+  opacity: .5;
 }
 /*-----------------------
                         Header section started
@@ -84,7 +89,6 @@ hr {
   background-color: #aaa;
   position: relative; /* button er position change er jonne dea*/
 }
-
 .popular-card {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
