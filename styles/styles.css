@@ -8,11 +8,11 @@
   --primary-color: #e02c6d;
   --secondary-color: #fff;
 }
-.btn-primary{
+.btn-primary {
   background-color: var(--primary-color);
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: var(--secondary-color);
-  padding: 20px;
+  padding: 10px;
   border-radius: 15px;
 }
 /*-----------------------
@@ -74,59 +74,106 @@ hr {
   padding: 10px;
 }
 /*----------------popular callection start-------------*/
-.popular-collection>h1{
+.popular-collection > h1 {
   text-align: center;
   margin-bottom: 50px;
   font-size: 2em;
 }
-.popular-collection{
+.popular-collection {
   padding: 150px 80px;
-  background-color: #AAA;
+  background-color: #aaa;
   position: relative; /* button er position change er jonne dea*/
 }
 
-.popular-card{
+.popular-card {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
- gap: 20px;
-border-radius: 15px;
-  
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border-radius: 15px;
 }
-.popular-card .card{
-   background-color: var(--secondary-color);
-   margin-bottom: 20px; 
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 10px 10px 5px gray;
+.popular-card .card {
+  background-color: var(--secondary-color);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 5px gray;
 }
-.popular-card img{
+.popular-card img {
   width: 100%;
   height: 256px;
 }
-.see-more{
+.see-more {
   position: absolute;
   color: var(--primary-color);
-  background-color: #AAA;
+  background-color: #aaa;
   bottom: 100px;
   right: 35px;
   font-size: 2em;
   border: none;
 }
+/*----------------
+              featured style started
+                             ----------------------*/
+.featured-section {
+  background-color: #aaa;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 40px;
+}
+.featured-about,
+.featured-image {
+  padding: 5px 50px;
+}
+.featured-about > h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.featured-about > p {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+.featured-image {
+  height: 40vh;
+  width: auto;
+}
+
+/*-------------------
+                        Footer
+                                  ---------------*/
+
+.footer {
+  text-align: center;
+  background-color: #000;
+  color: var(--secondary-color);
+  padding: 50px 0;
+}
+.footer p{
+  margin: 20px;
+}
+.footer-logo i{
+  padding-right: 30px;
+}
+.featured-image{
+  width: 100%;
+}
 /*------------------------------------------------------
                                   Media Quary
 ----------------------------------------------------------*/
- /* for mobile  */
+/* for mobile  */
 @media screen and (max-width: 576px) {
   .header {
     flex-direction: column;
   }
-  .header-manu ,
-  .popular-card{
+  .header-manu,
+  .popular-card {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
-  .journey-influencer {
+  .journey-influencer,
+  .featured-section {
     flex-direction: column-reverse;
+    text-align: center;
   }
   .logo-section {
     display: grid;
@@ -136,7 +183,7 @@ border-radius: 15px;
   hr {
     display: none;
   }
-  .header-manu>a :last-child{
+  .header-manu > a :last-child {
     position: absolute;
     top: 65px;
     right: 45px;
@@ -149,20 +196,24 @@ border-radius: 15px;
   .header {
     flex-direction: column;
   }
-  .header-manu ,
-  .popular-card{
+  .header-manu,
+  .popular-card {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
   .logo-section {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
   }
+   .featured-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 }
 /* for laptop  */
-@media screen and (min-width: 993px) and (max-width:1200px) {
-.popular-card{
-    grid-template-columns: repeat(3,1fr);
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .popular-card {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
